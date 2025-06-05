@@ -13,12 +13,6 @@ The objective of the project is to create a simple, menu-driven C# program that 
 # Features Unit Conversion
 Support for conversion of distance (km ↔ miles), temperature (°C ↔ °F), and weight (kg ↔ lbs).
 
-# Simple Menu System
-Trivial navigation using a console-based menu.
-
-# Interactive User Input
-The user can select the conversion type and input values for the conversion.
-
 # Error Handling
 User inputs are validated, and feedback is given.
 
