@@ -1,0 +1,14 @@
+C:\Users\fraul\source\repos\ProjectUnitCoversion\ProjectUnitCoversion\bin\Debug\net8.0\ProjectUnitCoversion.exe
+C:\Users\fraul\source\repos\ProjectUnitCoversion\ProjectUnitCoversion\bin\Debug\net8.0\ProjectUnitCoversion.deps.json
+C:\Users\fraul\source\repos\ProjectUnitCoversion\ProjectUnitCoversion\bin\Debug\net8.0\ProjectUnitCoversion.runtimeconfig.json
+C:\Users\fraul\source\repos\ProjectUnitCoversion\ProjectUnitCoversion\bin\Debug\net8.0\ProjectUnitCoversion.dll
+C:\Users\fraul\source\repos\ProjectUnitCoversion\ProjectUnitCoversion\bin\Debug\net8.0\ProjectUnitCoversion.pdb
+C:\Users\fraul\source\repos\ProjectUnitCoversion\ProjectUnitCoversion\obj\Debug\net8.0\ProjectUnitCoversion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fraul\source\repos\ProjectUnitCoversion\ProjectUnitCoversion\obj\Debug\net8.0\ProjectUnitCoversion.AssemblyInfoInputs.cache
+C:\Users\fraul\source\repos\ProjectUnitCoversion\ProjectUnitCoversion\obj\Debug\net8.0\ProjectUnitCoversion.AssemblyInfo.cs
+C:\Users\fraul\source\repos\ProjectUnitCoversion\ProjectUnitCoversion\obj\Debug\net8.0\ProjectUnitCoversion.csproj.CoreCompileInputs.cache
+C:\Users\fraul\source\repos\ProjectUnitCoversion\ProjectUnitCoversion\obj\Debug\net8.0\ProjectUnitCoversion.dll
+C:\Users\fraul\source\repos\ProjectUnitCoversion\ProjectUnitCoversion\obj\Debug\net8.0\refint\ProjectUnitCoversion.dll
+C:\Users\fraul\source\repos\ProjectUnitCoversion\ProjectUnitCoversion\obj\Debug\net8.0\ProjectUnitCoversion.pdb
+C:\Users\fraul\source\repos\ProjectUnitCoversion\ProjectUnitCoversion\obj\Debug\net8.0\ProjectUnitCoversion.genruntimeconfig.cache
+C:\Users\fraul\source\repos\ProjectUnitCoversion\ProjectUnitCoversion\obj\Debug\net8.0\ref\ProjectUnitCoversion.dll
