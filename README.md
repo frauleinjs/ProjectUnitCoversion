@@ -18,7 +18,33 @@ Log for conversion history.
 Main menu include 10 option for unit coversion and one more option to view history log.
 Selecting one of the unit conversion option take user to a sub menu which include 2 option for relevent unit conversion.
 
+# Console user interface
+1. Main menu
+    Select a conversion option:
+     Distance (km <-> miles)
+     Temperature (C <-> F)
+     Weight (kg <-> lbs)
+     Length (vm <-> inches)
+     Speed (km/h <-> mph)
+     Area (sq.m <-> sq.ft)
+     Volume (liters <-> gallons)
+     Time (hours <-> minutes)
+     Energy (joules <-> calories)
+     Pressue (bar <-> psi)
+     View Conversion History
+     Exit
+     Enter  your choice (1-12): Enter your choice (1-12):
 
+2. Sub menu
+    Kilometers to Miles
+    Miles to Kilometers
+    Enter your choice (1-12):
+
+3. Unit Input and output Display:
+     Enter your choice (1-2): 1
+     Enter temperature in Celsius: 34
+     34 °C = 93.20 °F
+     
 # Error Handling
 User inputs are validated, and feedback is given.
 
