@@ -1,17 +1,23 @@
 # Unit Converter
 Convert distances (km ↔ miles), temperature (°C ↔ °F), weights (kg ↔ lbs), etc. Uses a simple menu system.
 
-# Introduction 
+# Project Overview
 Unit conversion is a common problem in computer programming, particularly when dealing with different measurement systems. The mathematical formulas for conversions are simple, but determining the correct method and implementing it successfully is not always simple. This project meets the need for a C# program that converts units such as distance, temperature, and weight, providing programmers with a simple but useful solution.
 
-# Problem Statement
-There are many applications requiring users in different domains or fields to have unit conversions, but implementing these conversions in an accessible manner is not simple. It is difficult for developers to create intuitive and comprehensible interfaces to select and convert the units accordingly.
-
-# Objective 
-The objective of the project is to create a simple, menu-driven C# program that facilitates easy conversions between normal measurements of distance, temperature, and weight. The notion is to provide an end-user with a simple but robust tool and to address some of the typical issues in applying unit conversion in C#.
+# Team Members
+Fraulein Joy Sumabat - A00251549  
+Milan Shrestha - A00300455
+Oluwatoni Kolade - A00288606
+Anand Yashwanth - A00321928
 
 # Features Unit Conversion
 Support for conversion of distance (km ↔ miles), temperature (°C ↔ °F), and weight (kg ↔ lbs).
+Log for conversion history.
+
+# Application Flow
+Main menu include 10 option for unit coversion and one more option to view history log.
+Selecting one of the unit conversion option take user to a sub menu which include 2 option for relevent unit conversion.
+
 
 # Error Handling
 User inputs are validated, and feedback is given.
@@ -19,6 +25,12 @@ User inputs are validated, and feedback is given.
 # Tools and Techniques C#
 The programming language the unit converter is written in.
 Console Application: A text-based menu system is utilized as the user interface.
+
+# sources
+www.w3schools.com
+www.codecademy.com/learn/learn-c-sharp
+https://youtu.be/oZIQK9uLgnk
+Stackoverflow.com
 
 Mathematical Conversion Formulas: Trivial conversion formulas are applied for every unit type.
 
