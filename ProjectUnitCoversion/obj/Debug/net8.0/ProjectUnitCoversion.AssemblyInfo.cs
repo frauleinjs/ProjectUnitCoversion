@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjectUnitCoversion")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6fc5a69935173856b8266f2b56a20f1e33e1bbb7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+932e44ef086a0076a56571af2430b4bf3b83f4e3")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjectUnitCoversion")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjectUnitCoversion")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

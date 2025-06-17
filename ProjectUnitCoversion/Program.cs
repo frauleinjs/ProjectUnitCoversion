@@ -6,178 +6,105 @@ class UnitConverter1
     public static void Main()
     {
         Console.WriteLine("Welcome to the Unit Converter");
-        Console.WriteLine("This tool can help you convert distances, temperatures, and weights between various units.");
+        Console.WriteLine("This tool supports a wide range of unit conversions.");
 
         bool exitProgram = false;
         while (!exitProgram)
         {
-            Console.WriteLine("\nPlease select an option:");
-            Console.WriteLine("1. Convert Distance (km ↔ miles)");
-            Console.WriteLine("2. Convert Temperature (°C ↔ °F)");
-            Console.WriteLine("3. Convert Weight (kg ↔ lbs)");
-            Console.WriteLine("4. Exit");
-            Console.WriteLine("5. View Conversion History");
-            Console.Write("Enter your choice (1-5): ");
+            Console.WriteLine("\nSelect a conversion option:");
+            Console.WriteLine("1. Distance (km ↔ miles)");
+            Console.WriteLine("2. Temperature (°C ↔ °F)");
+            Console.WriteLine("3. Weight (kg ↔ lbs)");
+            Console.WriteLine("4. Length (cm ↔ inches)");
+            Console.WriteLine("5. Speed (km/h ↔ mph)");
+            Console.WriteLine("6. Area (sq.m ↔ sq.ft)");
+            Console.WriteLine("7. Volume (liters ↔ gallons)");
+            Console.WriteLine("8. Time (hours ↔ minutes)");
+            Console.WriteLine("9. Energy (joules ↔ calories)");
+            Console.WriteLine("10. Pressure (bar ↔ psi)");
+            Console.WriteLine("11. View Conversion History");
+            Console.WriteLine("12. Exit");
+            Console.Write("Enter your choice (1-12): ");
 
-            int choice;
-            if (!int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > 5)
+            if (!int.TryParse(Console.ReadLine(), out int choice) || choice < 1 || choice > 12)
             {
-                Console.WriteLine("Invalid input! Please select a valid option.");
+                Console.WriteLine("Invalid input! Please try again.");
                 continue;
             }
 
             switch (choice)
             {
-                case 1:
-                    ConvertDistance1();
-                    break;
-                case 2:
-                    ConvertTemperature1();
-                    break;
-                case 3:
-                    ConvertWeight1();
-                    break;
-                case 4:
+                case 1: Convert("Kilometers", "Miles", 0.621371); break;
+                case 2: ConvertTemperature(); break;
+                case 3: Convert("Kilograms", "Pounds", 2.20462); break;
+                case 4: Convert("Centimeters", "Inches", 0.393701); break;
+                case 5: Convert("Kilometers/hour", "Miles/hour", 0.621371); break;
+                case 6: Convert("Square meters", "Square feet", 10.7639); break;
+                case 7: Convert("Liters", "Gallons", 0.264172); break;
+                case 8: Convert("Hours", "Minutes", 60); break;
+                case 9: Convert("Joules", "Calories", 0.239006); break;
+                case 10: Convert("Bar", "Psi", 14.5038); break;
+                case 11: ViewConversionHistory(); break;
+                case 12:
                     exitProgram = true;
                     Console.WriteLine("Thank you for using the Unit Converter. Goodbye!");
                     break;
-                case 5:
-                    ViewConversionHistory();
-                    break;
             }
         }
     }
 
-    static void ConvertDistance1()
+    static void Convert(string unit1, string unit2, double factor)
     {
-        Console.WriteLine("\nConvert Distance:");
-        Console.WriteLine("1. Kilometers to Miles");
-        Console.WriteLine("2. Miles to Kilometers");
+        Console.WriteLine($"\nConvert {unit1} ↔ {unit2}");
+        Console.WriteLine($"1. {unit1} to {unit2}");
+        Console.WriteLine($"2. {unit2} to {unit1}");
         Console.Write("Enter your choice (1-2): ");
 
-        int choice;
-        if (!int.TryParse(Console.ReadLine(), out choice) || (choice != 1 && choice != 2))
+        if (!int.TryParse(Console.ReadLine(), out int direction) || (direction != 1 && direction != 2))
         {
-            Console.WriteLine("Invalid choice! Returning to main menu.");
+            Console.WriteLine("Invalid choice! Returning to menu.");
             return;
         }
 
-        double result;
-        if (choice == 1)
+        Console.Write($"Enter value in {(direction == 1 ? unit1 : unit2)}: ");
+        if (!double.TryParse(Console.ReadLine(), out double value))
         {
-            Console.Write("Enter distance in kilometers: ");
-            double kilometers;
-            if (!double.TryParse(Console.ReadLine(), out kilometers))
-            {
-                Console.WriteLine("Invalid input! Returning to main menu.");
-                return;
-            }
-            result = kilometers * 0.621371;
-            Console.WriteLine($"{kilometers} kilometers is equal to {result:F2} miles.");
-            LogConversion($"{kilometers} kilometers = {result:F2} miles");
+            Console.WriteLine("Invalid input! Returning to menu.");
+            return;
         }
-        else if (choice == 2)
-        {
-            Console.Write("Enter distance in miles: ");
-            double miles;
-            if (!double.TryParse(Console.ReadLine(), out miles))
-            {
-                Console.WriteLine("Invalid input! Returning to main menu.");
-                return;
-            }
-            result = miles / 0.621371;
-            Console.WriteLine($"{miles} miles is equal to {result:F2} kilometers.");
-            LogConversion($"{miles} miles = {result:F2} kilometers");
-        }
+
+        double result = (direction == 1) ? value * factor : value / factor;
+        string resultMsg = $"{value} {(direction == 1 ? unit1 : unit2)} = {result:F2} {(direction == 1 ? unit2 : unit1)}";
+        Console.WriteLine(resultMsg);
+        LogConversion(resultMsg);
     }
 
-    static void ConvertTemperature1()
+    static void ConvertTemperature()
     {
         Console.WriteLine("\nConvert Temperature:");
         Console.WriteLine("1. Celsius to Fahrenheit");
         Console.WriteLine("2. Fahrenheit to Celsius");
         Console.Write("Enter your choice (1-2): ");
 
-        int choice;
-        if (!int.TryParse(Console.ReadLine(), out choice) || (choice != 1 && choice != 2))
+        if (!int.TryParse(Console.ReadLine(), out int choice) || (choice != 1 && choice != 2))
         {
-            Console.WriteLine("Invalid choice! Returning to main menu.");
+            Console.WriteLine("Invalid input! Returning to main menu.");
             return;
         }
 
-        double result;
-        if (choice == 1)
+        Console.Write($"Enter temperature in {(choice == 1 ? "Celsius" : "Fahrenheit")}: ");
+        if (!double.TryParse(Console.ReadLine(), out double temp))
         {
-            Console.Write("Enter temperature in Celsius: ");
-            double celsius;
-            if (!double.TryParse(Console.ReadLine(), out celsius))
-            {
-                Console.WriteLine("Invalid input! Returning to main menu.");
-                return;
-            }
-            result = (celsius * 9 / 5) + 32;
-            Console.WriteLine($"{celsius}°C is equal to {result:F2}°F.");
-            LogConversion($"{celsius}°C = {result:F2}°F");
-        }
-        else if (choice == 2)
-        {
-            Console.Write("Enter temperature in Fahrenheit: ");
-            double fahrenheit;
-            if (!double.TryParse(Console.ReadLine(), out fahrenheit))
-            {
-                Console.WriteLine("Invalid input! Returning to main menu.");
-                return;
-            }
-            result = (fahrenheit - 32) * 5 / 9;
-            Console.WriteLine($"{fahrenheit}°F is equal to {result:F2}°C.");
-            LogConversion($"{fahrenheit}°F = {result:F2}°C");
-        }
-    }
-
-    static void ConvertWeight1()
-    {
-        Console.WriteLine("\nConvert Weight:");
-        Console.WriteLine("1. Kilograms to Pounds");
-        Console.WriteLine("2. Pounds to Kilograms");
-        Console.Write("Enter your choice (1-2): ");
-
-        int choice;
-        if (!int.TryParse(Console.ReadLine(), out choice) || (choice != 1 && choice != 2))
-        {
-            Console.WriteLine("Invalid choice! Returning to main menu.");
+            Console.WriteLine("Invalid input! Returning to main menu.");
             return;
         }
 
-        double result;
-        if (choice == 1)
-        {
-            Console.Write("Enter weight in kilograms: ");
-            double kilograms;
-            if (!double.TryParse(Console.ReadLine(), out kilograms))
-            {
-                Console.WriteLine("Invalid input! Returning to main menu.");
-                return;
-            }
-            result = kilograms * 2.20462;
-            Console.WriteLine($"{kilograms} kg is equal to {result:F2} lbs.");
-            LogConversion($"{kilograms} kg = {result:F2} lbs");
-        }
-        else if (choice == 2)
-        {
-            Console.Write("Enter weight in pounds: ");
-            double pounds;
-            if (!double.TryParse(Console.ReadLine(), out pounds))
-            {
-                Console.WriteLine("Invalid input! Returning to main menu.");
-                return;
-            }
-            result = pounds / 2.20462;
-            Console.WriteLine($"{pounds} lbs is equal to {result:F2} kg.");
-            LogConversion($"{pounds} lbs = {result:F2} kg");
-        }
+        double result = (choice == 1) ? (temp * 9 / 5) + 32 : (temp - 32) * 5 / 9;
+        string resultMsg = $"{temp}°{(choice == 1 ? "C" : "F")} = {result:F2}°{(choice == 1 ? "F" : "C")}";
+        Console.WriteLine(resultMsg);
+        LogConversion(resultMsg);
     }
 
-    // 🔹 Method to log conversions to a file
     static void LogConversion(string message)
     {
         string folderPath = "ConversionLogs";
@@ -190,7 +117,6 @@ class UnitConverter1
         File.AppendAllText(filePath, logEntry + Environment.NewLine);
     }
 
-    // 🔹 Method to view conversion history
     static void ViewConversionHistory()
     {
         string folderPath = "ConversionLogs";
