@@ -2,7 +2,16 @@
 Convert distances (km ↔ miles), temperature (°C ↔ °F), weights (kg ↔ lbs), etc. Uses a simple menu system.
 
 # Project Overview
-Unit conversion is a common problem in computer programming, particularly when dealing with different measurement systems. The mathematical formulas for conversions are simple, but determining the correct method and implementing it successfully is not always simple. This project meets the need for a C# program that converts units such as distance, temperature, and weight, providing programmers with a simple but useful solution.
+Unit conversion is a common challenge in many real-world applications, especially when dealing with multiple systems of measurement such as metric and imperial. Although the mathematical formulas for conversion are straightforward, building a user-friendly and error-proof system requires careful implementation.
+This project addresses that challenge by providing a versatile and beginner-friendly C# program that supports:
+1. Multiple types of unit conversions.
+2. A clear, menu-driven console interface.
+3. History logging to keep track of past conversions.
+The program serves as both a learning tool for understanding user input handling, file I/O, and error management in C#, and a practical utility for quick and accurate conversions.
+
+# Project Goal and Functionality
+The goal of this project is to create a robust C# console application that performs accurate unit conversions across multiple categories, including distance, temperature, weight, length, speed, area, volume, time, energy, and pressure.
+This tool simplifies the process of converting between different measurement systems (e.g., metric and imperial) using an intuitive, text-based menu system. It also logs all conversions to a file, allowing users to view a history of past calculations.
 
 # Team Members
 Fraulein Joy Sumabat - A00251549  
